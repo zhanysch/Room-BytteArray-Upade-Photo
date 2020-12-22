@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.trinitydigital.cameraimage">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -11,6 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".CameraImageApp"
         android:theme="@style/Theme.CameraImage">
         <activity android:name=".ui.fullscreen.FullScreenActivity"></activity>
         <activity android:name=".ui.main.MainActivity">

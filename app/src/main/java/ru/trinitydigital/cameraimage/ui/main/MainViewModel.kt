@@ -5,16 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import retrofit2.Response
+import ru.trinitydigital.cameraimage.data.model.TokenModel
 import ru.trinitydigital.cameraimage.data.repositories.UserRepository
 
-class MainViewModel(val repository: UserRepository) : ViewModel() {
+class MainViewModel(private val repository: UserRepository) : ViewModel() {
 
-    init {
-        authUser()
-    }
-
-
-    private fun authUser() {
+     fun authUser() {
         viewModelScope.launch(Dispatchers.IO) {
             runCatching {
                 val result = repository.login("rojsasha@gmail.com", "fifa11alex")

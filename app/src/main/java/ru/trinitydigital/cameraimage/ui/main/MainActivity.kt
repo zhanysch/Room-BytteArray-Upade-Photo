@@ -21,6 +21,8 @@ class MainActivity : BaseUserPhotoActivity() {
         setContentView(R.layout.activity_main)
         setupListeners()
 
+        viewModel.authUser()
+
         val radius = resources.getDimension(R.dimen.imageRadius)
         image.shapeAppearanceModel = image.shapeAppearanceModel.toBuilder()
             .setTopLeftCorner(CornerFamily.ROUNDED, radius)
