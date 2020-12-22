@@ -1,8 +1,8 @@
-package ru.trinitydigital.data.remote
+package ru.trinitydigital.cameraimage.data.remote
 
 import okhttp3.Interceptor
 import okhttp3.Response
-import ru.trinitydigital.data.local.PrefsHelper
+import ru.trinitydigital.cameraimage.data.local.PrefsHelper
 
 class HeadersInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {

@@ -1,4 +1,4 @@
-package ru.trinitydigital.data.model
+package ru.trinitydigital.cameraimage.data.model
 
 data class AuthModel(
     val email: String,

@@ -1,4 +1,4 @@
-package ru.trinitydigital.data.local
+package ru.trinitydigital.cameraimage.data.local
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,10 +1,10 @@
-package ru.trinitydigital.data.remote
+package ru.trinitydigital.cameraimage.data.remote
 
 import retrofit2.Response
 import retrofit2.http.*
-import ru.trinitydigital.data.model.AuthModel
-import ru.trinitydigital.data.model.ProfileModel
-import ru.trinitydigital.data.model.TokenModel
+import ru.trinitydigital.cameraimage.data.model.AuthModel
+import ru.trinitydigital.cameraimage.data.model.ProfileModel
+import ru.trinitydigital.cameraimage.data.model.TokenModel
 
 interface RetrofitService {
 

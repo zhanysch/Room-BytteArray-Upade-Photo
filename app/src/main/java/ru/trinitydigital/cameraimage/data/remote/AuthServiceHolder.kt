@@ -1,4 +1,4 @@
-package ru.trinitydigital.data.remote
+package ru.trinitydigital.cameraimage.data.remote
 
 class AuthServiceHolder {
 

@@ -1,12 +1,12 @@
-package ru.trinitydigital.data.remote
+package ru.trinitydigital.cameraimage.data.remote
 
 import kotlinx.coroutines.runBlocking
 import okhttp3.Authenticator
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.Route
-import ru.trinitydigital.data.local.PrefsHelper
-import ru.trinitydigital.data.model.TokenModel
+import ru.trinitydigital.cameraimage.data.local.PrefsHelper
+import ru.trinitydigital.cameraimage.data.model.TokenModel
 
 
 class TokenAuthenticator(private val authApi: AuthApi) : Authenticator {

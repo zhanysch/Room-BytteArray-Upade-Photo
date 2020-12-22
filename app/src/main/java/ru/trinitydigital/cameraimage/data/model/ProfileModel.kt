@@ -1,4 +1,4 @@
-package ru.trinitydigital.data.model
+package ru.trinitydigital.cameraimage.data.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

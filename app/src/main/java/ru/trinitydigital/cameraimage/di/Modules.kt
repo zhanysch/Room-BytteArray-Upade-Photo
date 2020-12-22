@@ -1,8 +1,8 @@
-package ru.trinitydigital.di
+package ru.trinitydigital.cameraimage.di
 
 import org.koin.dsl.module.module
 import ru.trinitydigital.cameraimage.BuildConfig.BASE_URL
-import ru.trinitydigital.data.remote.RetrofitBuilder
+import ru.trinitydigital.cameraimage.data.remote.RetrofitBuilder
 
 val viewModelModule = module {
 }
