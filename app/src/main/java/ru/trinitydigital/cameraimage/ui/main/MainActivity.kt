@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.google.android.material.shape.CornerFamily
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.trinitydigital.cameraimage.R
+import ru.trinitydigital.cameraimage.common.BaseUserPhotoActivity
 import java.io.File
 
 class MainActivity : BaseUserPhotoActivity() {

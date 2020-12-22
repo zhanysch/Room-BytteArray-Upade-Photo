@@ -1,4 +1,4 @@
-package ru.trinitydigital.cameraimage.ui.main
+package ru.trinitydigital.cameraimage.common
 
 import android.Manifest
 import android.app.Activity
@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
+import ru.trinitydigital.cameraimage.ui.main.onRequestPermissionsResult
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
