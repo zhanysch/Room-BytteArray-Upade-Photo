@@ -1,11 +1,11 @@
-package ru.trinitydigital.cameraimage
+package ru.trinitydigital.cameraimage.ui.main
 
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import com.google.android.material.shape.CornerFamily
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.trinitydigital.cameraimage.R
 import java.io.File
 
 class MainActivity : BaseUserPhotoActivity() {

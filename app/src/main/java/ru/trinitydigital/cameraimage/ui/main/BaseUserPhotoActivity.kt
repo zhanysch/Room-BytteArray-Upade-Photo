@@ -1,4 +1,4 @@
-package ru.trinitydigital.cameraimage
+package ru.trinitydigital.cameraimage.ui.main
 
 import android.Manifest
 import android.app.Activity

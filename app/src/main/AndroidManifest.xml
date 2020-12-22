@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CameraImage">
-        <activity android:name=".FullScreenActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.fullscreen.FullScreenActivity"></activity>
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

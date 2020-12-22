@@ -17,6 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "${base_url}"
     }
 
     buildTypes {
@@ -46,6 +47,17 @@ dependencies {
     kapt "org.permissionsdispatcher:permissionsdispatcher-processor:4.3.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    def koinVersion = "1.0.2"
+    implementation "org.koin:koin-android:$koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+
+    def livedata_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_version"
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 }
