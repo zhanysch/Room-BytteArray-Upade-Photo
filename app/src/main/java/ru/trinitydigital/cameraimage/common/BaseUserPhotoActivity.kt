@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import permissions.dispatcher.NeedsPermission
 import permissions.dispatcher.RuntimePermissions
-import ru.trinitydigital.cameraimage.ui.main.onRequestPermissionsResult
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
