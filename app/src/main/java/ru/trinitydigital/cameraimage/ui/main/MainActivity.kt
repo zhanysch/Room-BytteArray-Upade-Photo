@@ -3,7 +3,10 @@ package ru.trinitydigital.cameraimage.ui.main
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.google.android.material.shape.CornerFamily
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.trinitydigital.cameraimage.R
@@ -23,6 +26,8 @@ class MainActivity : BaseUserPhotoActivity() {
 
         viewModel.authUser()
 
+        setupViewModel()
+
         val radius = resources.getDimension(R.dimen.imageRadius)
         image.shapeAppearanceModel = image.shapeAppearanceModel.toBuilder()
             .setTopLeftCorner(CornerFamily.ROUNDED, radius)
@@ -31,6 +36,15 @@ class MainActivity : BaseUserPhotoActivity() {
             .setBottomRightCorner(CornerFamily.ROUNDED, radius)
             .build()
 
+    }
+
+    private fun setupViewModel() {
+        viewModel.error.observe(this, Observer {
+            Toast.makeText(this,it, Toast.LENGTH_LONG).show()
+        })
+        viewModel.data.observe(this, Observer {
+          Picasso.get().load(it.avatar).into(image)
+        })
     }
 
     private fun setupListeners() {
