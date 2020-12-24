@@ -1,6 +1,5 @@
 package ru.trinitydigital.cameraimage.ui.main
 
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
@@ -58,8 +57,9 @@ class MainActivity : BaseUserPhotoActivity() {
     }
 
     override fun showPhoto(file: File) {
-        val bitmap = BitmapFactory.decodeFile(file.absolutePath)
-        image.setImageBitmap(bitmap)
+        /*val bitmap = BitmapFactory.decodeFile(file.absolutePath)
+        image.setImageBitmap(bitmap)*/
+        viewModel.updateUserWithPhoto(file)
     }
 
     override fun showPhoto1(file: Uri?) {
