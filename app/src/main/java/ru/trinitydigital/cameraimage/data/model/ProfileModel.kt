@@ -1,11 +1,16 @@
 package ru.trinitydigital.cameraimage.data.model
 
 import android.os.Parcelable
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
+@Entity  // room
 data class ProfileModel(
+    @PrimaryKey  // room
     val id: Int,
     val email: String?,
     @SerializedName("role_code")
@@ -25,6 +30,8 @@ data class ProfileModel(
     var instagramLink: String?,
     @SerializedName("vk_link")
     var vkLink: String?,
-    var avatar: String?
+    var avatar: String?, //@ColumnInfo тип ячейки
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)  // BLOB хранитс тип данных в байтах
+    var image : ByteArray? = null
 
 ) : Parcelable

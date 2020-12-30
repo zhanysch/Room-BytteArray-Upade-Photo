@@ -1,15 +1,11 @@
 package ru.trinitydigital.cameraimage.ui.main
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.gson.Gson
 import kotlinx.coroutines.launch
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
-import okhttp3.RequestBody.Companion.toRequestBody
 import ru.trinitydigital.cameraimage.data.model.ProfileModel
 import ru.trinitydigital.cameraimage.data.repositories.UserRepository
 import ru.trinitydigital.cameraimage.utils.toImageRequestBody
@@ -19,6 +15,7 @@ import java.io.File
 class MainViewModel(private val repository: UserRepository) : ViewModel() {
 
     val data = MutableLiveData<ProfileModel>()
+
     val error = MutableLiveData<String>()
 
      fun authUser() {
@@ -31,7 +28,7 @@ class MainViewModel(private val repository: UserRepository) : ViewModel() {
                 it.message?.let { it1 -> Log.e("error", it1) }
             }
         }
-    }
+     }
 
 
     private fun loadUser() {
@@ -64,6 +61,16 @@ class MainViewModel(private val repository: UserRepository) : ViewModel() {
 
             }
         }
+    }
+
+    fun getUserFromDB(id: Int): LiveData<ProfileModel?> {  // получнн данных с б/д
+       return repository.getUser(id)
+    }
+
+    fun updateUser(array: ByteArray) {  // сохраняет новую обновленные данные
+        val user = data.value
+        user?.image = array
+        user?.let { repository.updateUser(it) }  //repository.updateUser()  с помошью repository вызывает методд updateUser() из класс repository
     }
 
     companion object{
